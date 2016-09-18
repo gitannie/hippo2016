@@ -29,26 +29,27 @@
         private void InitializeComponent()
         {
             this.tabResultatCourse = new System.Windows.Forms.TabPage();
+            this.cbChevaux = new System.Windows.Forms.ComboBox();
             this.dgResultatCheval = new System.Windows.Forms.DataGridView();
             this.tabgeneral = new System.Windows.Forms.TabControl();
             this.tabCheval = new System.Windows.Forms.TabPage();
-            this.cbChevaux = new System.Windows.Forms.ComboBox();
-            this.cbCourse = new System.Windows.Forms.ComboBox();
-            this.dgRésultatsCourse = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgRésultatsCourse = new System.Windows.Forms.DataGridView();
+            this.cbCourse = new System.Windows.Forms.ComboBox();
             this.tabResultats = new System.Windows.Forms.TabPage();
-            this.cbCourses = new System.Windows.Forms.ComboBox();
-            this.dgParticipation = new System.Windows.Forms.DataGridView();
-            this.cbCheval = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbCheval = new System.Windows.Forms.ComboBox();
+            this.dgParticipation = new System.Windows.Forms.DataGridView();
+            this.cbCourses = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabResultatCourse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgResultatCheval)).BeginInit();
             this.tabgeneral.SuspendLayout();
             this.tabCheval.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgRésultatsCourse)).BeginInit();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgRésultatsCourse)).BeginInit();
             this.tabResultats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgParticipation)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +66,15 @@
             this.tabResultatCourse.TabIndex = 1;
             this.tabResultatCourse.Text = "Résultats par chevaux";
             this.tabResultatCourse.UseVisualStyleBackColor = true;
-    
+            // 
+            // cbChevaux
+            // 
+            this.cbChevaux.FormattingEnabled = true;
+            this.cbChevaux.Location = new System.Drawing.Point(52, 27);
+            this.cbChevaux.Name = "cbChevaux";
+            this.cbChevaux.Size = new System.Drawing.Size(509, 27);
+            this.cbChevaux.TabIndex = 1;
+            this.cbChevaux.Text = "Sélectionnez le cheval";
             // 
             // dgResultatCheval
             // 
@@ -78,7 +87,6 @@
             this.dgResultatCheval.ReadOnly = true;
             this.dgResultatCheval.Size = new System.Drawing.Size(548, 290);
             this.dgResultatCheval.TabIndex = 0;
-            
             // 
             // tabgeneral
             // 
@@ -94,6 +102,7 @@
             // 
             // tabCheval
             // 
+            this.tabCheval.Controls.Add(this.button1);
             this.tabCheval.Controls.Add(this.tabControl1);
             this.tabCheval.Controls.Add(this.dgRésultatsCourse);
             this.tabCheval.Controls.Add(this.cbCourse);
@@ -105,35 +114,6 @@
             this.tabCheval.TabIndex = 0;
             this.tabCheval.Text = "Résultats par course";
             this.tabCheval.UseVisualStyleBackColor = true;
-            // 
-            // cbChevaux
-            // 
-            this.cbChevaux.FormattingEnabled = true;
-            this.cbChevaux.Location = new System.Drawing.Point(52, 27);
-            this.cbChevaux.Name = "cbChevaux";
-            this.cbChevaux.Size = new System.Drawing.Size(509, 27);
-            this.cbChevaux.TabIndex = 1;
-            this.cbChevaux.Text = "Sélectionnez le cheval";
-            // 
-            // cbCourse
-            // 
-            this.cbCourse.FormattingEnabled = true;
-            this.cbCourse.Location = new System.Drawing.Point(31, 23);
-            this.cbCourse.Name = "cbCourse";
-            this.cbCourse.Size = new System.Drawing.Size(483, 27);
-            this.cbCourse.TabIndex = 0;
-            this.cbCourse.Text = "Sélectionnez le cheval";
-            // 
-            // dgRésultatsCourse
-            // 
-            this.dgRésultatsCourse.AllowUserToAddRows = false;
-            this.dgRésultatsCourse.AllowUserToDeleteRows = false;
-            this.dgRésultatsCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgRésultatsCourse.Location = new System.Drawing.Point(19, 77);
-            this.dgRésultatsCourse.Name = "dgRésultatsCourse";
-            this.dgRésultatsCourse.ReadOnly = true;
-            this.dgRésultatsCourse.Size = new System.Drawing.Size(480, 320);
-            this.dgRésultatsCourse.TabIndex = 1;
             // 
             // tabControl1
             // 
@@ -165,6 +145,26 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // dgRésultatsCourse
+            // 
+            this.dgRésultatsCourse.AllowUserToAddRows = false;
+            this.dgRésultatsCourse.AllowUserToDeleteRows = false;
+            this.dgRésultatsCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgRésultatsCourse.Location = new System.Drawing.Point(19, 77);
+            this.dgRésultatsCourse.Name = "dgRésultatsCourse";
+            this.dgRésultatsCourse.ReadOnly = true;
+            this.dgRésultatsCourse.Size = new System.Drawing.Size(480, 320);
+            this.dgRésultatsCourse.TabIndex = 1;
+            // 
+            // cbCourse
+            // 
+            this.cbCourse.FormattingEnabled = true;
+            this.cbCourse.Location = new System.Drawing.Point(31, 23);
+            this.cbCourse.Name = "cbCourse";
+            this.cbCourse.Size = new System.Drawing.Size(483, 27);
+            this.cbCourse.TabIndex = 0;
+            this.cbCourse.Text = "Sélectionnez le cheval";
+            // 
             // tabResultats
             // 
             this.tabResultats.Controls.Add(this.label1);
@@ -179,14 +179,23 @@
             this.tabResultats.Text = "Résultat d\'un cheval à une course";
             this.tabResultats.UseVisualStyleBackColor = true;
             // 
-            // cbCourses
+            // label1
             // 
-            this.cbCourses.FormattingEnabled = true;
-            this.cbCourses.Location = new System.Drawing.Point(37, 25);
-            this.cbCourses.Name = "cbCourses";
-            this.cbCourses.Size = new System.Drawing.Size(310, 27);
-            this.cbCourses.TabIndex = 0;
-            this.cbCourses.Text = "Sélectionnez la course";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(40, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(233, 19);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Résultat du cheval pour la course :";
+            // 
+            // cbCheval
+            // 
+            this.cbCheval.FormattingEnabled = true;
+            this.cbCheval.Location = new System.Drawing.Point(391, 30);
+            this.cbCheval.Name = "cbCheval";
+            this.cbCheval.Size = new System.Drawing.Size(426, 27);
+            this.cbCheval.TabIndex = 2;
+            this.cbCheval.Text = "Sélectionnez le cheval";
             // 
             // dgParticipation
             // 
@@ -199,29 +208,29 @@
             this.dgParticipation.Size = new System.Drawing.Size(805, 184);
             this.dgParticipation.TabIndex = 1;
             // 
-            // cbCheval
+            // cbCourses
             // 
-            this.cbCheval.FormattingEnabled = true;
-            this.cbCheval.Location = new System.Drawing.Point(391, 30);
-            this.cbCheval.Name = "cbCheval";
-            this.cbCheval.Size = new System.Drawing.Size(426, 27);
-            this.cbCheval.TabIndex = 2;
-            this.cbCheval.Text = "Sélectionnez le cheval";
+            this.cbCourses.FormattingEnabled = true;
+            this.cbCourses.Location = new System.Drawing.Point(37, 25);
+            this.cbCourses.Name = "cbCourses";
+            this.cbCourses.Size = new System.Drawing.Size(310, 27);
+            this.cbCourses.TabIndex = 0;
+            this.cbCourses.Text = "Sélectionnez la course";
             // 
-            // label1
+            // button1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 19);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Résultat du cheval pour la course :";
+            this.button1.Location = new System.Drawing.Point(626, 110);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 72);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Monbouton";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Fgeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 511);
+            this.ClientSize = new System.Drawing.Size(865, 511);
             this.Controls.Add(this.tabgeneral);
             this.Name = "Fgeneral";
             this.Text = "Fgeneral";
@@ -230,8 +239,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgResultatCheval)).EndInit();
             this.tabgeneral.ResumeLayout(false);
             this.tabCheval.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgRésultatsCourse)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgRésultatsCourse)).EndInit();
             this.tabResultats.ResumeLayout(false);
             this.tabResultats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgParticipation)).EndInit();
@@ -256,6 +265,6 @@
         private System.Windows.Forms.ComboBox cbCheval;
         private System.Windows.Forms.DataGridView dgParticipation;
         private System.Windows.Forms.ComboBox cbCourses;
-
+        private System.Windows.Forms.Button button1;
     }
 }

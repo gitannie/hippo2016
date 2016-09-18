@@ -15,6 +15,7 @@ namespace hippodrome
         private SqlCommand cde;
         private SqlDataAdapter da;
         private DataTable dt;
+        //maj branche annie develop
         //
         // méthodes
         //
